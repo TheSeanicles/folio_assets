@@ -1,0 +1,55 @@
+:root {
+  --bg_light: white;
+  --fg_light: black;
+  --bg_dark: black;
+  --fg_dark: white;
+  
+  --r1: red;
+  --r2: red;
+  --o1: orange;
+  --o2: orange;
+  --y1: yellow;
+  --y2: yellow;
+  --g1: green;
+  --g2: green;
+  --b1: blue;
+  --b2: blue;
+  --i1: indigo;
+  --i2: indigo;
+  --v1: violet;
+  --v2: violet;
+
+}
+
+* {
+  color: var(--fg_light);
+  background-color: var(--bg_light);
+}
+
+a {
+  color: var(--b1);
+}
+
+@media (prefers-color-scheme: dark) {
+  * {
+    color: var(--fg_dark);
+    background-color: var(--bg_dark);
+  }
+}
+
+.text_throbber::before {
+  content: "";
+  animation: text_spin 0.5s linear infinite; /* Apply the spin animation */
+}
+
+@keyframes text_spin {
+  0% { content: "⣾"; }
+  12.5% { content: "⣽"; }
+  25% { content: "⣻"; }
+  37.5% { content: "⢿"; }
+  50% { content: "⡿"; }
+  62.5% { content: "⣟"; }
+  75% { content: "⣯"; }
+  100% { content: "⣷"; }
+}
+
